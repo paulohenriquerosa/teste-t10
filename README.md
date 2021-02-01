@@ -67,7 +67,7 @@ $ virtualenv .venv
 # Enable the virtual environment
 $ source .venv/bin/activate
 
-# Setup app folder to become a package and install all packages
+# Setup app folder to become a package and install all dependecies
 $ pip install -e .
 
 # Disable and enable the virtual environment for load the changes
@@ -88,7 +88,7 @@ $ uvicorn main:app --reload
 # Well done, project is started!
 ```
 
-To run the tests run the following command:
+To run the tests, in the `root folder` run the following command:
 ```bash
 $ pytest
 ```
