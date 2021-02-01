@@ -65,17 +65,14 @@ $ git clone https://github.com/paulohenriquerosa/teste-t10.git && cd teste-t10
 # Create a Virtual environment
 $ virtualenv .venv
 
-# Activate the virtual environment
+# Enable the virtual environment
 $ source .venv/bin/activate
 
-# Run project setup
-$ python setup.py install
-
-# Install all requirements
-$ pip install -r requirements.txt
-
-# Setup app folder to become a package
+# Setup app folder to become a package and install all packages
 $ pip install -e .
+
+# Disable and enable the virtual environment for load the changes
+$ deactivate && source .venv/bin/activate
 
 # Create the instance of postgreSQL using docker
 $ docker run --name t10_database \
