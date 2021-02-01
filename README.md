@@ -92,6 +92,10 @@ $ uvicorn main:app --reload
 # Well done, project is started!
 ```
 
+To run the tests run the following command:
+```bash
+$ pytest
+```
 ## 📝  Routes 
 
 To see the routes available in the api just type the following link in your browser.
