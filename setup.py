@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-setup(name='app', packages= find_packages(include=['app', 'app.*']),
+setup(name='app',  version='0.1.0', packages= find_packages(include=['app', 'app.*']),
 install_requires=[
   'async-exit-stack==1.0.1',
   'async-generator==1.10',
