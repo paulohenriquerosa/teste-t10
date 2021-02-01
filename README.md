@@ -1,6 +1,6 @@
 <h1 align="center">
 	<!-- <img alt="Logo" src=".github/logo.png" width="200px" /> -->
-  Application Logo
+  T10 Digital
 </h1>
 
 <h3 align="center">
