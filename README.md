@@ -1,6 +1,5 @@
 <h1 align="center">
-	<!-- <img alt="Logo" src=".github/logo.png" width="200px" /> -->
-  T10 Digital
+	<img alt="Logo" src="https://github.com/paulohenriquerosa/teste-t10/blob/main/img/logo.png" width="200px" /> 
 </h1>
 
 <h3 align="center">
