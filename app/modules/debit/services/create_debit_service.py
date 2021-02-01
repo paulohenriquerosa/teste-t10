@@ -5,7 +5,7 @@ from ..infra.orm.repositories.debit_repository import DebitRepository
 
 from ..infra.orm.entities.debit import Debit
 
-from ..dtos.createDebitDTO import CreateDebitDTO
+from ..dtos.create_debit_DTO import CreateDebitDTO
 
 class CreateDebitService:
   def __init__(self, db: Session) -> None:

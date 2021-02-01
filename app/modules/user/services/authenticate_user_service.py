@@ -8,7 +8,7 @@ from ..provider.hash_provider import verify_password
 
 from ..dtos.create_session_DTO import CreateSessionDTO
 
-from  app.config.auth import SECRET_KEY, ALGORITHM
+from  app.config.auth import SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES
 
 class AuthenticateUserService:
   def __init__(self, db: Session) -> None:

@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 
 from ..entities.user import User
-from ....dtos.create_user_dto import CreateUserDTO
+from ....dtos.create_user_DTO import CreateUserDTO
 
 class UserRepository:
 

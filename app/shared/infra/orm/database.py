@@ -4,7 +4,9 @@ from sqlalchemy_utils import create_database, database_exists
 from sqlalchemy.orm import sessionmaker
 
 
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:docker@localhost:5432/t10_database"
+from app.config.database import USERNAME, PASSWORD, HOST, PORT,DATA_BASE_NAME
+
+SQLALCHEMY_DATABASE_URL = f"postgresql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATA_BASE_NAME}"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 

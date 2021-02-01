@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from..entities.debit import Debit, DebitStatus
 
 
-from ....dtos.createDebitDTO import CreateDebitDTO
+from ....dtos.create_debit_DTO import CreateDebitDTO
 
 class DebitRepository:
   def __init__(self, db: Session) -> None:
