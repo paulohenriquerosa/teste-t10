@@ -12,7 +12,7 @@ from ....services.list_submitted_debits_service import ListSubmittedDebitsServic
 from ....services.submitted_debit_service import SubmittedDebitService
 
 
-from ....dtos.createDebitDTO import CreateDebitDTO
+from ....dtos.create_debit_DTO import CreateDebitDTO
 
 debit_routes = APIRouter()
 

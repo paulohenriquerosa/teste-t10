@@ -1,17 +1,12 @@
 from fastapi import APIRouter, Depends
-from pydantic import BaseModel
 from sqlalchemy.orm.session import Session
 from app.shared.infra.orm.database import SessionLocal
 
 
 from ....services.create_user_service import CreateUserService
 
-
-class UserData(BaseModel):
-  name: str
-  email: str
-  password: str
-
+from ....dtos.create_user_DTO import CreateUserDTO
+from ....dtos.response_create_user_DTO import ResponseCreateUserDTO
 
 # Dependecy 
 def get_db():
@@ -24,8 +19,8 @@ def get_db():
 
 user_routes = APIRouter()
 
-@user_routes.post('/')
-async def create(user_data: UserData, db: Session = Depends(get_db)):
+@user_routes.post('/', response_model=ResponseCreateUserDTO)
+async def create(user_data: CreateUserDTO, db: Session = Depends(get_db)):
 
   # TODO: Lembrar de tirar o hash da senha
   createUserService = CreateUserService(db=db)

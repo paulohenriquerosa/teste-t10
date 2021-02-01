@@ -3,11 +3,12 @@ from fastapi import HTTPException
 from jose import jwt
 
 
-from ..infra.orm.entities.user import User
 from ..infra.orm.repositories.user_repository import UserRepository
 from ..provider.hash_provider import verify_password
 
-from  app.config.auth import SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES
+from ..dtos.create_session_DTO import CreateSessionDTO
+
+from  app.config.auth import SECRET_KEY, ALGORITHM
 
 class AuthenticateUserService:
   def __init__(self, db: Session) -> None:
@@ -29,7 +30,6 @@ class AuthenticateUserService:
 
     to_encode = {
       'user_id' : user_exists.user_id.hex,
-      'exp': ACCESS_TOKEN_EXPIRE_MINUTES
     }
     token = jwt.encode(to_encode, key=SECRET_KEY, algorithm=ALGORITHM)
     

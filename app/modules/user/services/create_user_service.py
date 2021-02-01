@@ -5,7 +5,7 @@ from fastapi import HTTPException
 from ..infra.orm.entities.user import User
 from ..infra.orm.repositories.user_repository import UserRepository
 from ..provider.hash_provider import generateHash
-from app.modules.user.dtos.create_user_dto import CreateUserDTO
+from app.modules.user.dtos.create_user_DTO import CreateUserDTO
 
 class CreateUserService:
   def __init__(self, db: Session) -> None:

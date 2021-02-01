@@ -6,10 +6,8 @@ from app.shared.infra.orm.database import SessionLocal
 
 from ....services.authenticate_user_service import AuthenticateUserService
 
+from ....dtos.create_session_DTO import CreateSessionDTO
 
-class UserData(BaseModel):
-  email: str
-  password: str
 
 
 # Dependecy 
@@ -24,7 +22,7 @@ def get_db():
 session_routes = APIRouter()
 
 @session_routes.post('/')
-async def create(user_data: UserData, db: Session = Depends(get_db)):
+async def create(user_data: CreateSessionDTO, db: Session = Depends(get_db)):
 
   authenticateUserService = AuthenticateUserService(db=db)
   token = await authenticateUserService.execute(email=user_data.email, password=user_data.password)
