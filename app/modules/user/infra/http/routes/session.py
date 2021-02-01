@@ -21,7 +21,7 @@ def get_db():
 
 session_routes = APIRouter()
 
-@session_routes.post('/')
+@session_routes.post('')
 async def create(user_data: CreateSessionDTO, db: Session = Depends(get_db)):
 
   authenticateUserService = AuthenticateUserService(db=db)

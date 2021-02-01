@@ -19,7 +19,7 @@ def get_db():
 
 user_routes = APIRouter()
 
-@user_routes.post('/', response_model=ResponseCreateUserDTO)
+@user_routes.post('', response_model=ResponseCreateUserDTO)
 async def create(user_data: CreateUserDTO, db: Session = Depends(get_db)):
 
   # TODO: Lembrar de tirar o hash da senha
